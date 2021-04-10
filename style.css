@@ -1,17 +1,16 @@
+/* Core Styles */
+
 body {
-	margin: 0;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: #333;
-    height: 450px;
-    z-index: -1;
-    opacity: 0,6;
-	font-size: 1.1em;
+    color: #fff;
+    font-size: 1.1em;
     line-height: 1.5;
     text-align: center;
-	
+  }
 
-}
-img {
+  img {
     display: block;
     width: 100%;
     height: auto;
@@ -44,12 +43,15 @@ img {
     color: #333;
   }
 
-#showcase {
+  /* Header Showcase */
+
+  #showcase {
     min-height: 450px;
     color: #fff;
     text-align: center;
   }
-#showcase .bg-image {
+
+  #showcase .bg-image {
     position: absolute;
     background: #333
       url("https://static.pexels.com/photos/248515/pexels-photo-248515.png");
@@ -61,78 +63,20 @@ img {
     z-index: -1;
     opacity: 0.4;
   }
+
   #showcase h1 {
     padding-top: 100px;
     padding-bottom: 0;
   }
 
- 
   #showcase .content-wrap,
   #section-a .content-wrap {
     padding: 0 1.5em;
   }
 
-.inline {
-	display: inline-block;
-	top: 0;
-	vertical-align: top;
-}
+  /* Section A */
 
-
-#choose, #players, #resert_div {
-	width: 400px;
-	height: auto;
-	text-align: center;
-	border: 1px solid black;
-	padding: 20px 0;
-	margin: 7px 0;
-	background-color: white;
-}
-
-#one_player, #two_players, #reset {
-	padding: 5px;
-}
-
-#play_with, #you_choose {
-	margin: 20px;
-	font-size: 20px;
-}
-
-table{
-	max-width: 450px;
-	max-height: 450px;
-	margin: 5px auto;
-}
-
-td
-{
-	width: 150px;
-	height: 150px;
-	border: 1px solid black;
-	text-align: center;
-	font-size: 50px;
-	background-color: white;
-	border-radius: 5px;
-}
-
-#helper
-{
-	display: none;
-}
-
-#statement
-{
-	max-width: 450px;
-	height: 150px;
-	margin: 50px auto;
-	border: 1px solid black;
-	text-align: center;
-	font-size: 30px;
-	background-color: white;
-}
-/* Section A */
-
-#section-a {
+  #section-a {
     background: #eaeaea;
     color: #333;
     padding-bottom: 2em;
@@ -193,47 +137,39 @@ td
     text-decoration: none;
   }
 
+  /* Media Queries */
 
-@media screen and (max-width: 700px) {
-	.inline {
-		display: block;
-	}
-	
-	#choose, #players, #resert_div {
-		width: 100%;
-	}
-	.grid {
-		display: grid;
-		grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-	  }
-  
-	  #section-a .content-text {
-		columns: 2;
-		column-gap: 2em;
-	  }
-  
-	  #section-a .content-text p {
-		padding-top: 0;
-	  }
-  
-	  .content-wrap,
-	  #section-b ul {
-		grid-column: 2/4;
-	  }
-  
-	  .box,
-	  #main-footer div {
-		grid-column: span 2;
-	  }
-  
-	  #section-b ul {
-		display: flex;
-		justify-content: space-around;
-	  }
-  
-	  #section-b li {
-		width: 31%;
-	  }
-	
-	
-}
+  @media (min-width: 700px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+
+    #section-a .content-text {
+      columns: 2;
+      column-gap: 2em;
+    }
+
+    #section-a .content-text p {
+      padding-top: 0;
+    }
+
+    .content-wrap,
+    #section-b ul {
+      grid-column: 2/4;
+    }
+
+    .box,
+    #main-footer div {
+      grid-column: span 2;
+    }
+
+    #section-b ul {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #section-b li {
+      width: 31%;
+    }
+  }
